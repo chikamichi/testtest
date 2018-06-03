@@ -14,7 +14,9 @@ const App = () => (
 
 // 2. Ajout de l'élément virtuel dans le DOM du navigateur (mount/render) :
 // - équivalent logique de cible.appendChild(quoiajouter)
-const rootComponent = App();
-const targetNode = document.getElementById('root');
-render(rootComponent, targetNode);
+document.addEventListener('DOMContentLoaded', () => {
+  const rootComponent = App();
+  const targetNode = document.getElementById('root');
+  render(rootComponent, targetNode);
+});
 
